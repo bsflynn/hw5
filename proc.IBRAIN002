@@ -90,7 +90,7 @@ cat outcount.r*.1D > outcount_rall.1D
 # ================================= tshift =================================
 # time shift data so all slice timing is the same 
 foreach run ( $runs )
-    3dTshift -tzero 0 -quintic -tpattern @/bind/preproc/${subj}/sub-${subj}_task-words_run-02.txt -prefix pb01.$subj.r$run.tshift \
+    3dTshift -tzero 0 -quintic -tpattern @/bind/preproc/${subj}/sub-${subj}_task-words_run-02_bold.txt -prefix pb01.$subj.r$run.tshift \
              pb00.$subj.r$run.tcat+orig
 end
 
